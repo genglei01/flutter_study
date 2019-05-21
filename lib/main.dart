@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/data_flow/ValueNotifierDemo.dart';
 import 'package:flutter_study/common/Master.dart';
+import 'package:flutter_study/data_flow/InheritedWidgetDemo.dart'
+    as InheritedWidget_Demo;
 
 void main() => runApp(MyApp());
 
@@ -29,6 +31,8 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
       children: <Widget>[
         this._buildListTitle(context, "Value Notifier", ValueNotifierDemo()),
+        this._buildListTitle(
+            context, "InheritedWidget", InheritedWidget_Demo.Home()),
       ],
     ));
     ;

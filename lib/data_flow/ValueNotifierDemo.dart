@@ -28,6 +28,7 @@ class _ValueNotifierDemoState extends State<ValueNotifierDemo> {
   @override
   Widget build(BuildContext context) {
     return Master(
+      title: "Value Notifier",
       child: Center(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
