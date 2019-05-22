@@ -1,3 +1,6 @@
+/**
+  * ValueNotifier:ValueNotifier实例可以添加监听器，当ValueNotifier的值发生化时，会除非监听器。
+  */
 import 'package:flutter/material.dart';
 import 'package:flutter_study/common/Master.dart';
 

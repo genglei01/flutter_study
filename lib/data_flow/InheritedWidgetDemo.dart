@@ -1,3 +1,10 @@
+/**
+ * `InheritedWidget`:
+ * 1.可以自上而下跨组件传递数据。
+ * 2.只有`IneritedWidget`子孙节点才能通过`inheritFromWidgetOfExactType`取得IneritedWidget
+ * 3.`didChangeDependencies`：只有当`IneritedWidget`的state发生变化，
+ *   并且`updateShouldNotify`返回`true`才会被调用。
+ */
 import 'package:flutter/material.dart';
 import 'package:flutter_study/common/Master.dart';
 
@@ -37,7 +44,6 @@ class _HomeState extends State<Home> {
 
 class _InheritedStateContainer extends InheritedWidget {
   final Counter counter;
-  final textStyle = TextStyle(fontSize: 20);
 
   //我们知道InheritedWidget总是包裹的一层，所以它必有child
   _InheritedStateContainer(
