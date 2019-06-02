@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/data_flow/ValueNotifierDemo.dart';
 import 'package:flutter_study/common/Master.dart';
-import 'package:flutter_study/data_flow/InheritedWidgetDemo.dart'
-    as InheritedWidget_Demo;
+import 'package:flutter_study/data_flow/InheritedWidgetDemo.dart' as InheritedWidget_Demo;
+import 'package:flutter_study/data_flow/stream_builder/stream_builder.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,8 +31,8 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
       children: <Widget>[
         this._buildListTitle(context, "Value Notifier", ValueNotifierDemo()),
-        this._buildListTitle(
-            context, "InheritedWidget", InheritedWidget_Demo.Home()),
+        this._buildListTitle(context, "InheritedWidget", InheritedWidget_Demo.Home()),
+        this._buildListTitle(context, "Stream", Counter()),
       ],
     ));
     ;
@@ -43,8 +43,7 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
         trailing: Icon(Icons.keyboard_arrow_right),
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => target));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => target));
         });
   }
 }
